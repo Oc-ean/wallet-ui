@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:wallet_app_ui/pages/transaction_page.dart';
 import 'package:wallet_app_ui/util/my_list_tile.dart';
@@ -38,13 +37,13 @@ class AddInfoPage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
             Row(
-              children: [
+              children: const [
                 Padding(
-                  padding: const EdgeInsets.only(left: 8.0),
+                  padding: EdgeInsets.only(left: 8.0),
                   child: Text(
                     'Select your Bank',
                     style: TextStyle(
@@ -55,7 +54,7 @@ class AddInfoPage extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Padding(
@@ -67,16 +66,16 @@ class AddInfoPage extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => TransactionPage(),
+                            builder: (context) => const TransactionPage(),
                           ));
                     },
-                    child: MyListTile(
+                    child: const MyListTile(
                       imagePath: 'images/c.png',
                       tileTitle: 'CityBank',
                       tileSubTitle: '**** 2345',
                     ),
                   ),
-                  MyListTile(
+                  const MyListTile(
                     imagePath: 'images/h.png',
                     tileTitle: 'HsbcBank',
                     tileSubTitle: '**** 2345',

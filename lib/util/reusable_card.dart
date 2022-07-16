@@ -1,13 +1,12 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class ReuseableCard extends StatelessWidget {
+class ReusableCard extends StatelessWidget {
   final double balance;
   final int cardNumber;
   final int expiryMonth;
   final int expiryYear;
-  final color;
-  const ReuseableCard({
+  final dynamic color;
+  const ReusableCard({
     Key? key,
     required this.balance,
     required this.cardNumber,
@@ -22,7 +21,7 @@ class ReuseableCard extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 25),
       child: Container(
         // height: ,
-        padding: EdgeInsets.all(
+        padding: const EdgeInsets.all(
           20,
         ),
         width: 300,
@@ -36,7 +35,7 @@ class ReuseableCard extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   'Balance',
                   style: TextStyle(
                     color: Colors.white,
@@ -48,17 +47,17 @@ class ReuseableCard extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Text(
               '\$' + balance.toString(),
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.white,
                 fontSize: 28,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Row(
@@ -67,13 +66,13 @@ class ReuseableCard extends StatelessWidget {
                 // card info
                 Text(
                   cardNumber.toString(),
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                   ),
                 ),
                 Text(
                   expiryMonth.toString() + '/' + expiryYear.toString(),
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                   ),
                 ),

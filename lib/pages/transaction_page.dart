@@ -40,7 +40,7 @@ class TransactionPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(top: 20, left: 20),
               child: Row(
-                children: [
+                children: const [
                   Text(
                     'Send',
                     style: TextStyle(
@@ -58,7 +58,7 @@ class TransactionPage extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Padding(
@@ -67,39 +67,44 @@ class TransactionPage extends StatelessWidget {
                 children: [
                   MyCard(
                     iconColor: Colors.pink.shade100,
-                    conColor: Color(0xFFFEEAEA),
-                    contColor: Color(0xFFFFDADB),
+                    conColor: const Color(0xFFFEEAEA),
+                    contColor: const Color(0xFFFFDADB),
                     firstText: 'To your',
                     secondText: 'Own account',
                     icon: Icons.arrow_circle_down_rounded,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 25,
                   ),
-                  MyCard(
-                    iconColor: Color(0xFF88CBFF),
-                    conColor: Color(0xFFC6E6FF),
-                    contColor: Colors.white,
-                    firstText: 'To your',
-                    secondText: 'Bank account',
-                    icon: Icons.arrow_circle_up_rounded,
+                  const Padding(
+                    padding: EdgeInsets.only(right: 10),
+                    child: MyCard(
+                      iconColor: Color(0xFF88CBFF),
+                      conColor: Color(0xFFC6E6FF),
+                      contColor: Colors.white,
+                      firstText: 'To your',
+                      secondText: 'Bank account',
+                      icon: Icons.arrow_circle_up_rounded,
+                    ),
                   ),
                 ],
               ),
             ),
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
             Container(
-              height: 200,
-              width: 350,
+              padding: const EdgeInsets.only(top: 5, bottom: 30, right: 25),
+              width: MediaQuery.of(context).size.width * 0.9,
+              // height: 200,
+              // width: 350,
               decoration: BoxDecoration(
                 boxShadow: [
                   BoxShadow(
                     // darker shadow
                     color: Colors.grey.shade500,
                     blurRadius: 15,
-                    offset: Offset(5, 5),
+                    offset: const Offset(5, 5),
                   ),
-                  BoxShadow(
+                  const BoxShadow(
                     // darker shadow
                     color: Colors.white,
                     blurRadius: 15,
@@ -107,13 +112,13 @@ class TransactionPage extends StatelessWidget {
                   ),
                 ],
                 borderRadius: BorderRadius.circular(40),
-                color: Color(0xFF756AF4),
+                color: const Color(0xFF756AF4),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 35, left: 25),
+                  const Padding(
+                    padding: EdgeInsets.only(top: 35, left: 25),
                     child: Text(
                       'Send to your mobile contact',
                       style: TextStyle(
@@ -123,52 +128,50 @@ class TransactionPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 25),
-                    child: Container(
-                      height: 70,
-                      width: 300,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(18),
-                        color: Colors.white,
-                      ),
-                      child: Row(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 25),
-                            child: Text(
-                              'Enter Name or Mobile Number',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.grey,
-                              ),
+                  Container(
+                    margin: const EdgeInsets.only(left: 25),
+                    height: 60,
+                    width: 300,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(18),
+                      color: Colors.white,
+                    ),
+                    child: Row(
+                      children: const [
+                        Padding(
+                          padding: EdgeInsets.only(left: 25),
+                          child: Text(
+                            'Enter Name or Mobile Number',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.grey,
                             ),
                           ),
-                          SizedBox(
-                            width: 25,
-                          ),
-                          Icon(
-                            CupertinoIcons.search,
-                            color: Colors.grey,
-                            size: 30,
-                          ),
-                        ],
-                      ),
+                        ),
+                        SizedBox(
+                          width: 25,
+                        ),
+                        Icon(
+                          CupertinoIcons.search,
+                          color: Colors.grey,
+                          size: 30,
+                        ),
+                      ],
                     ),
                   ),
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25),
               child: Column(
-                children: [
+                children: const [
                   MyListTile(
                       imagePath: 'images/stp.png',
                       tileTitle: 'Micheal',

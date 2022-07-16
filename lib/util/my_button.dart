@@ -17,7 +17,7 @@ class MyButton extends StatelessWidget {
           height: 95,
           padding: const EdgeInsets.all(20),
           decoration: BoxDecoration(
-            boxShadow: [
+            boxShadow: const [
               BoxShadow(
                 color: Colors.white,
                 blurRadius: 30,
@@ -30,7 +30,7 @@ class MyButton extends StatelessWidget {
             child: Image.asset(imagePath),
           ),
         ),
-        SizedBox(height: 4),
+        const SizedBox(height: 4),
         // text
 
         Text(
