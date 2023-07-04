@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 class MyCard extends StatelessWidget {
-  final dynamic contColor;
-  final dynamic conColor;
-  final dynamic iconColor;
-  final String firstText;
-  final String secondText;
-  final IconData icon;
+  final contColor;
+  final conColor;
+  final iconColor;
+  final firstText;
+  final secondText;
+  final icon;
   const MyCard({
     Key? key,
     required this.iconColor,
@@ -20,19 +20,17 @@ class MyCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width * 0.4,
-      // height: 160,
-      // width: 160,
-      padding: const EdgeInsets.symmetric(vertical: 15),
+      height: 160,
+      width: 160,
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
             // darker shadow
             color: Colors.grey.shade500,
             blurRadius: 15,
-            offset: const Offset(5, 5),
+            offset: Offset(5, 5),
           ),
-          const BoxShadow(
+          BoxShadow(
             // darker shadow
             color: Colors.white,
             blurRadius: 15,
@@ -85,7 +83,7 @@ class MyCard extends StatelessWidget {
               fontWeight: FontWeight.bold,
               color: Colors.grey,
             ),
-          ),
+          )
         ],
       ),
     );

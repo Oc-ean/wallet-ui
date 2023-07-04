@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:wallet_app_ui/pages/transaction_page.dart';
 import 'package:wallet_app_ui/util/my_list_tile.dart';
@@ -7,7 +8,7 @@ class AddInfoPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 280,
       //   color: Color(0xFF757575),
       //   child: Container(
@@ -19,6 +20,7 @@ class AddInfoPage extends StatelessWidget {
       //       color: Colors.grey.shade300,
       //     ),
       child: SingleChildScrollView(
+        clipBehavior: Clip.none,
         child: Column(
           children: [
             GestureDetector(
@@ -28,11 +30,11 @@ class AddInfoPage extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.only(top: 10),
                 child: Container(
-                  height: 6,
-                  width: 100,
+                  height: 3,
+                  width: 80,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
-                    color: Colors.black,
+                    color: Colors.black38,
                   ),
                 ),
               ),
@@ -43,7 +45,7 @@ class AddInfoPage extends StatelessWidget {
             Row(
               children: const [
                 Padding(
-                  padding: EdgeInsets.only(left: 8.0),
+                  padding: EdgeInsets.only(left: 30.0),
                   child: Text(
                     'Select your Bank',
                     style: TextStyle(
@@ -61,7 +63,10 @@ class AddInfoPage extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 children: [
-                  GestureDetector(
+                  MyListTile(
+                    imagePath: 'images/c.png',
+                    tileTitle: 'CityBank',
+                    tileSubTitle: '**** 2345',
                     onTap: () {
                       Navigator.push(
                           context,
@@ -69,16 +74,18 @@ class AddInfoPage extends StatelessWidget {
                             builder: (context) => const TransactionPage(),
                           ));
                     },
-                    child: const MyListTile(
-                      imagePath: 'images/c.png',
-                      tileTitle: 'CityBank',
-                      tileSubTitle: '**** 2345',
-                    ),
                   ),
-                  const MyListTile(
+                  MyListTile(
                     imagePath: 'images/h.png',
                     tileTitle: 'HsbcBank',
                     tileSubTitle: '**** 2345',
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const TransactionPage(),
+                          ));
+                    },
                   ),
                 ],
               ),

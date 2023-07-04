@@ -76,26 +76,21 @@ class TransactionPage extends StatelessWidget {
                   const SizedBox(
                     width: 25,
                   ),
-                  const Padding(
-                    padding: EdgeInsets.only(right: 10),
-                    child: MyCard(
-                      iconColor: Color(0xFF88CBFF),
-                      conColor: Color(0xFFC6E6FF),
-                      contColor: Colors.white,
-                      firstText: 'To your',
-                      secondText: 'Bank account',
-                      icon: Icons.arrow_circle_up_rounded,
-                    ),
+                  const MyCard(
+                    iconColor: Color(0xFF88CBFF),
+                    conColor: Color(0xFFC6E6FF),
+                    contColor: Colors.white,
+                    firstText: 'To your',
+                    secondText: 'Bank account',
+                    icon: Icons.arrow_circle_up_rounded,
                   ),
                 ],
               ),
             ),
             const SizedBox(height: 40),
             Container(
-              padding: const EdgeInsets.only(top: 5, bottom: 30, right: 25),
-              width: MediaQuery.of(context).size.width * 0.9,
-              // height: 200,
-              // width: 350,
+              height: 200,
+              width: 350,
               decoration: BoxDecoration(
                 boxShadow: [
                   BoxShadow(
@@ -128,62 +123,88 @@ class TransactionPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 30,
                   ),
-                  Container(
-                    margin: const EdgeInsets.only(left: 25),
-                    height: 60,
-                    width: 300,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(18),
-                      color: Colors.white,
-                    ),
-                    child: Row(
-                      children: const [
-                        Padding(
-                          padding: EdgeInsets.only(left: 25),
-                          child: Text(
-                            'Enter Name or Mobile Number',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.grey,
+                  Padding(
+                    padding: const EdgeInsets.only(left: 25),
+                    child: Container(
+                      height: 70,
+                      width: 300,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(18),
+                        color: Colors.white,
+                      ),
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 25),
+                            child: Text(
+                              'Enter Name or Mobile Number',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.grey,
+                              ),
                             ),
                           ),
-                        ),
-                        SizedBox(
-                          width: 25,
-                        ),
-                        Icon(
-                          CupertinoIcons.search,
-                          color: Colors.grey,
-                          size: 30,
-                        ),
-                      ],
+                          SizedBox(
+                            width: 25,
+                          ),
+                          Icon(
+                            CupertinoIcons.search,
+                            color: Colors.grey,
+                            size: 30,
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
               ),
             ),
-            const SizedBox(
+            SizedBox(
               height: 40,
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 25),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
-                children: const [
+                children: [
                   MyListTile(
-                      imagePath: 'images/stp.png',
-                      tileTitle: 'Micheal',
-                      tileSubTitle: '+1 610 244 8974 '),
-                  MyListTile(
-                      imagePath: 'images/outdoor.png',
-                      tileTitle: 'Charlotte',
-                      tileSubTitle: '+1 585 438 0264 '),
+                    imagePath: 'images/stp.png',
+                    tileTitle: 'Micheal',
+                    tileSubTitle: '+1 610 244 8974 ',
+                    color: const Color(0xffADB0B4).withOpacity(0.9),
+                  ),
+                  const SizedBox(
+                    height: 8.0,
+                  ),
+                  Container(
+                    height: 90,
+                    width: 420,
+                    padding: const EdgeInsets.only(left: 5, right: 5),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(25),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        MyListTile(
+                            imagePath: 'images/outdoor.png',
+                            tileTitle: 'Charlotte',
+                            tileSubTitle: '+1 585 438 0264 ',
+                            color: const Color(0xffB1B3B7).withOpacity(1.0)),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 8.0,
+                  ),
                   MyListTile(
                       imagePath: 'images/pr.png',
                       tileTitle: 'Laura',
-                      tileSubTitle: '+1 585 438 0138 '),
+                      tileSubTitle: '+1 585 438 0138 ',
+                      color: const Color(0xffADB0B4).withOpacity(0.9)),
                 ],
               ),
             )
